@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF282175-9615-47E6-8C8A-310273506AB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qfly</RootNamespace>
+    <AssemblyName>qfly</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AssemblyUnhollower">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\AssemblyUnhollower.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.Timeline">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\AVProVideo.Extensions.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.UnityUI">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\AVProVideo.Extensions.UnityUI.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.VisualEffectGraph">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\AVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Runtime">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\AVProVideo.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BeeByteObfuscator">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\BeeByteObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="BlobHandles.Runtime">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\BlobHandles.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="Collections.Pooled">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Collections.Pooled.dll</HintPath>
+    </Reference>
+    <Reference Include="DataModel">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween.Modules">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\DOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppAssemblyGenerator">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Il2CppAssemblyGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDummyDll">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Il2CppDummyDll.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDumper">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Il2CppDumper.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="OscCore.Runtime">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\OscCore.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon-DotNet">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Photon-DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ShapesRuntime">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\ShapesRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigtrap.VrTunnellingPro">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Sigtrap.VrTunnellingPro.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transmtn">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Transmtn.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\managed\UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\UniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\UniTask.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\unity\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Collections">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Dynamics">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Dynamics.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Dynamics.Contact">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.SDK3.Dynamics.Contact.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Dynamics.PhysBone">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.SDK3.Dynamics.PhysBone.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDKBase.Editor.BuildPipeline">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.SDKBase.Editor.BuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.ClientBindings">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.ClientBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Common">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Security">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.AOT">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.Serialization.AOT.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.OdinSerializer">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.Serialization.OdinSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VM">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.VM.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VRCWrapperModules">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.VRCWrapperModules.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Wrapper">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Udon.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Core">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Elements">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.UI.Elements.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Shared">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.UI.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Utility">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRC.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Editor">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCCore-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Standalone">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCCore-Standalone.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCLog">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCLog.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK2">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCSDK2.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCSDK3.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3A">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCSDK3A.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDKBase">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\VRCSDKBase.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\..\..\..\OneDrive\Documents\com.vrchat.oculus.quest\files\melonloader\etc\assembly_generation\Il2CppDumper\DummyDll\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
